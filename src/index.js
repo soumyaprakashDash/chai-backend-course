@@ -6,6 +6,11 @@ import connectDB from "./db/index.js";
 dotenv.config({
     path: './.env'
 });
+console.log("Cloudinary ENV check:", {
+  name: process.env.CLOUDINARY_CLOUD_NAME,
+  key: process.env.CLOUDINARY_API_KEY,
+  secret: process.env.CLOUDINARY_API_SECRET ? "✅ loaded" : "❌ missing"
+});
 
 
 connectDB()
